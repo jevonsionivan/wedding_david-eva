@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wedding Invitation - David & Eva</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: 'Georgia', serif;
+    color:#333;
+    text-align:center;
+    background:black;
+}
+
+.hero{
+    position:relative;
+    height:100vh;
+    background:url('background.jpg') center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.overlay{
+    background:rgba(0,0,0,0.5);
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+}
+
+.content{
+    position:relative;
+    color:white;
+    padding:20px;
+    animation:fadeIn 2s ease-in-out;
+}
+
+h1{
+    font-size:40px;
+    letter-spacing:2px;
+}
+
+h2{
+    font-size:22px;
+    margin-top:10px;
+}
+
+.button{
+    margin-top:30px;
+    padding:12px 25px;
+    background:#ffffff;
+    color:black;
+    border:none;
+    border-radius:25px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.section{
+    padding:60px 20px;
+    background:#fff;
+}
+
+.date-box{
+    font-size:28px;
+    font-weight:bold;
+    margin:20px 0;
+}
+
+.footer{
+    padding:30px;
+    font-size:14px;
+    background:#f5f5f5;
+}
+
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+/* Responsive */
+@media(max-width:768px){
+    h1{
+        font-size:28px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<audio id="musik" autoplay loop>
+    <source src="lagu1.mp3" type="audio/mpeg">
+</audio>
+
+<div class="hero">
+    <div class="overlay"></div>
+    <div class="content">
+        <h2>The Wedding of</h2>
+        <h1>David Darius<br>&<br>Eva Uzulina</h1>
+        <button class="button" onclick="bukaUndangan()">Buka Undangan</button>
+    </div>
+</div>
+
+<div class="section">
+    <h2>Firman Tuhan</h2>
+    <p>
+    "Demikianlah mereka bukan lagi dua, melainkan satu.
+    Karena itu, apa yang telah dipersatukan Allah,
+    tidak boleh diceraikan manusia." <br>
+    (Matius 19)
+    </p>
+</div>
+
+<div class="section">
+    <h2>Pemberkatan</h2>
+    <p>Sabtu, 28 Maret 2026</p>
+    <p>Pukul 10.00 WIB</p>
+    <p>GBI Bumi Anggrek<br>Bekasi</p>
+</div>
+
+<div class="section">
+    <h2>Resepsi</h2>
+    <p>Pukul 13.00 WIB – Selesai</p>
+    <p>Jl. Perjuangan Gg. Rahayu<br>
+    Bekasi Utara</p>
+</div>
+
+<div class="footer">
+    <p>Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir.</p>
+    <br>
+    <strong>David & Eva</strong>
+</div>
+
+<script>
+function bukaUndangan(){
+    const audio = document.getElementById("musik");
+    audio.play().catch(() => {});
+    window.scrollTo({
+        top: window.innerHeight,
+        behavior: "smooth"
+    });
+}
+</script>
+
+</body>
+</html>
